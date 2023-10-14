@@ -27,7 +27,7 @@ add_library(vkMines ${headerFiles} ${sourceFiles})
 target_link_libraries(LogiLogi vkMines glfw)
 
 if (APPLE)
-	target_link_libraries(LogiLogi vulkan)
+	target_link_libraries(LogiLogi libvulkan.1.dylib)
 elseif(UNIX)
 	target_link_libraries(LogiLogi vulkanUnx)
 elseif(WIN32)
